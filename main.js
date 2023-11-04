@@ -50,26 +50,23 @@ function init(namedamArray,storageArray,capacityArray) {
     var map = new longdo.Map({
         placeholder: document.getElementById('map')
     });
+    map.Event.bind('overlayClick', function(event) {
+
+    });
 for(var i = 0; i < Longitude.length; i++){
+        // var detailText =  "ปริมาณที่กักเก็บ : " + storageArray[i] + " ล้านลูกบาศก์เมตร\n" +
+        //     "ปริมาณที่กักเก็บสูงสุด : " + capacityArray[i] + " ล้านลูกบาศก์เมตร" ;    
         var marker = new longdo.Marker({ lon: Longitude[i], lat: Latitude[i] },
         {
         title: namedamArray[i],
         icon: {
             url: 'https://map.longdo.com/mmmap/images/pin_mark.png',
-            offset: { x: 12, y: 45 },
+            offset: { x: 12, y: 45 }},
+            // detail: detailText,
+            // draggable: true
             
-        }
+        
         });
         map.Overlays.add(marker);
-
-        var popup = new longdo.Popup({ lon: Longitude[i], lat: Latitude[i] }, 
-            { 
-                titile: namedamArray[i],
-                detail: storageArray[i] + " ล้านลูกบาศก์เมตร",
-                size: { width: 200, height: 200 },
-                closable: false
-            });
-            map.Overlays.add(popup);
-    
-    } 
+    }
 }

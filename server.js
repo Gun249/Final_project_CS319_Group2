@@ -22,35 +22,6 @@ app.get('/api',async (req, res) => {
     }
 });
 
-// app.get('/test',async (req, res) => {
-//     try{    
-//         var final = [];
-//         const response = await axios.get("https://app.rid.go.th/reservoir/api/dam/public");
-//         const dammm = response.data.data;
-//         dammm.forEach(region => {
-//             console.log(dammm);
-//             final = [{
-//                 region: region.region,
-//                 dam: region.dam,
-//             }]
-//             // region.dam.forEach(dam => {
-//             //     console.log("ชื่อ : " + dam.name);
-//             //     namedam = dam.name
-//             //     console.log("ปริมาณที่กักเก็บ : " + dam.storage + " "+ unit);
-//             //     console.log("ปริมาณที่กักเก็บสูงสุด : " + dam.capacity +" " +  unit);
-//             //     console.log("เจ้าของ : " + dam.owner);
-//             // });
-
-            
-//         });
-        
-//         res.send(final);
-//     }
-//     catch(error){
-//         console.log(error);
-//         res.status(500).send("Internal Server Error");
-//     }
-// });
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 });
