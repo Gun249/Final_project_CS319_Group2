@@ -22,27 +22,27 @@ function datadam(){
 
 
         data.forEach(region => { // วนลูปเพื่อดึงข้อมูลภูมิภาค
-            console.log("ภูมิภาค : " + region.region); // แสดงภูมิภาค
             region.dam.forEach(dam => { // วนลูปเพื่อดึงข้อมูลเขื่อน
-                console.log("ชื่อ : " + dam.name); // แสดงชื่อเขื่อน
+                // console.log("ชื่อ : " + dam.name); // แสดงชื่อเขื่อน
                 namedamArray.push(dam.name); // เพิ่มชื่อเขื่อนลงใน array
                 
-                console.log("ปริมาณที่กักเก็บ : " + dam.storage + " "+ unit); // แสดงปริมาณที่กักเก็บ
+                // console.log("ปริมาณที่กักเก็บ : " + dam.storage + " "+ unit); // แสดงปริมาณที่กักเก็บ
                 storageArray.push(dam.storage); // เพิ่มปริมาณที่กักเก็บลงใน array
                 
-                console.log("ปริมาณที่กักเก็บสูงสุด : " + dam.capacity +" " +  unit); // แสดงปริมาณที่กักเก็บสูงสุด
+                // console.log("ปริมาณที่กักเก็บสูงสุด : " + dam.capacity +" " +  unit); // แสดงปริมาณที่กักเก็บสูงสุด
                 capacityArray.push(dam.capacity); // เพิ่มปริมาณที่กักเก็บสูงสุดลงใน array
-                console.log("เจ้าของ : " + dam.owner); // แสดงเจ้าของเขื่อน
+                // console.log("เจ้าของ : " + dam.owner); // แสดงเจ้าของเขื่อน
                 ownerArray.push(dam.owner); // เพิ่มเจ้าของเขื่อนลงใน array
                 active_storageArray.push(dam.active_storage); // เพิ่มปริมาณน้ำที่ใช้ได้ลงใน array
                 dead_storageArray.push(dam.dead_storage); // เพิ่มปริมาณน้ำที่ใช้ไม่ได้ลงใน array
                 volumeArray.push(dam.volume); 
                 percent_storageArray.push(dam.percent_storage);
+                console.log(percent_storageArray)
                 provinceArray.push(dam.province);
                 latitudeArray.push(dam.lat);
                 longitudeArray.push(dam.lng); 
                 regionArray.push(dam.region);    
-                console.log(regionArray)
+                // console.log(regionArray)
                 
                 init(namedamArray,storageArray,capacityArray,ownerArray,active_storageArray,dead_storageArray,volumeArray,percent_storageArray,longitudeArray,provinceArray,latitudeArray,regionArray); // เรียกใช้ฟังก์ชัน init
             });
@@ -69,9 +69,9 @@ function init(namedamArray,storageArray,capacityArray,ownerArray,active_storageA
         เปอร์เซนต์ปริมาณน้ำต่อปริมาณกักเก็บ: ${percent_storageArray[i]} %`; // สร้างตัวแปร detailText เพื่อเก็บข้อความที่จะแสดงใน popup
         detailTextarray.push(detailText)
     }
-    createmaker(map,namedamArray,detailTextarray,longitudeArray,provinceArray,latitudeArray,regionArray);
+    createmaker(map,namedamArray,detailTextarray,longitudeArray,provinceArray,latitudeArray,regionArray,percent_storageArray);
 }
-function createmaker(map,namedamArray,detailTextarray,longitudeArray,provinceArray,latitudeArray,regionArray){
+function createmaker(map,namedamArray,detailTextarray,longitudeArray,provinceArray,latitudeArray,regionArray,percent_storageArray){
     for(var i = 0; i < longitudeArray.length; i++){
 
         var marker = new longdo.Marker({ lon: longitudeArray[i], lat: latitudeArray[i]},  
@@ -120,10 +120,10 @@ function createmaker(map,namedamArray,detailTextarray,longitudeArray,provinceArr
             }
         }
     });
-    const uregio = document.getElementById("region");
-    uregio.addEventListener('change', function () {
+    const uregion = document.getElementById("region");
+    uregion.addEventListener('change', function () {
         map.Overlays.clear();
-        if (uregio.value === "Default") {
+        if (uregion.value === "Default") {
             for(var i = 0; i < longitudeArray.length; i++){
 
                 var marker = new longdo.Marker({ lon: longitudeArray[i], lat: latitudeArray[i]},  
@@ -138,9 +138,7 @@ function createmaker(map,namedamArray,detailTextarray,longitudeArray,provinceArr
             }
         } else {
             for (i = 0; i < provinceArray.length; i++) {
-                if (uregio.value === regionArray[i]) {
-                    
-                    
+                if (uregion.value === regionArray[i]) {
                     var marker = new longdo.Marker({ lon: longitudeArray[i], lat: latitudeArray[i] },  
                     {
                         title: namedamArray[i],
@@ -156,5 +154,89 @@ function createmaker(map,namedamArray,detailTextarray,longitudeArray,provinceArr
         }
 
     });
+    var storage = document.getElementById("storage");
+    var buttons = storage.getElementsByTagName("button");
+    
+    for (var i = 0; i < buttons.length; i++) {
+        var btn = buttons[i];
+    
+        btn.addEventListener('click', function () {
+            console.log("Button clicked: " + this.value);
+            map.Overlays.clear();
+    
+            if (this.value == "Default") {
+                for (let j = 0; j < percent_storageArray.length; j++) {
+                    console.log("Creating marker for Default");
+                    var marker = new longdo.Marker({ lon: longitudeArray[j], lat: latitudeArray[j]},  
+                    {
+                        title: namedamArray[j],
+                        icon: { 
+                            url: 'https://map.longdo.com/mmmap/images/pin_mark.png',
+                            offset: { x: 12, y: 45 }
+                        },
+                        detail: detailTextarray[j]
+                    });
+                    map.Overlays.add(marker);
+                }
+            } else {
+                
+                for (let j = 0; j < percent_storageArray.length; j++) {
+                    if(percent_storageArray[j] != null){
+                        if (this.value >= percent_storageArray[j]) {
+                            
+                            console.log("Creating marker for value: " + this.value);
+                            var marker = new longdo.Marker({ lon: longitudeArray[j], lat: latitudeArray[j] },  
+                            {
+                                title: namedamArray[j],
+                                icon: {
+                                    url: 'https://map.longdo.com/mmmap/images/pin_mark.png',
+                                    offset: { x: 12, y: 45 }
+                                },
+                                detail: detailTextarray[j]
+                            });
+                            map.Overlays.add(marker);
 
+                    }
+                    } else if(percent_storageArray[j] == null){
+                        console.log("ข้อมูลยังไม่อัปเดต")
+                        alert("ข้อมูลยังไม่อัปเดต");
+                        break;
+                    }
+                }
+            }
+        });
+    }
+    
+    
+    
+
+    // const storage = document.getElementById("storage");
+    // var buttons = storage.getElementsByTagName("button");
+    
+    // for (var i = 0; i < buttons.length; i++) {
+    //     var btn = buttons[i];
+    
+    //     btn.addEventListener('click', function () {
+    //         map.Overlays.clear();
+    
+    //         if (this.value === "Default") {
+
+    //         } else {
+    //             for (var i = 0; i < provinceArray.length; i++) {
+    //                 if (this.value === percent_storageArray[i]) {
+    //                     var marker = new longdo.Marker({ lon: longitudeArray[i], lat: latitudeArray[i] },  
+    //                     {
+    //                         title: namedamArray[i],
+    //                         icon: {
+    //                             url: 'https://map.longdo.com/mmmap/images/pin_mark.png',
+    //                             offset: { x: 12, y: 45 }
+    //                         },
+    //                         detail: detailTextarray[i]
+    //                     });
+    //                     map.Overlays.add(marker);
+    //                 }
+    //             }
+    //         }
+    //     });
+    // }
 }
