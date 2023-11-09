@@ -1,6 +1,7 @@
 const express = require('express'); // ใช้ express ในการเชื่อมต่อ server และ client
 const router = express.Router();
 const axios = require('axios'); // ใช้ axios ในการดึงข้อมูลจาก api
+const appid = "460000a9c169e1ecc9ea0c9eecec39e4"
 
 router.get('/api',async (req, res) => {
     const locate = require('./../map/locate.json');
@@ -38,6 +39,17 @@ router.get('/api',async (req, res) => {
         console.log(error); // แสดง error ใน console
         res.status(500).send("Internal Server Error"); // ส่ง error 500 กลับไปยัง client
     }
+});
+
+
+router.post('/test', async (req, res) => {
+    try{
+
+   }catch(error){
+         console.log(error); // แสดง error ใน console
+         res.status(500).send("Internal Server Error"); // ส่ง error 500 กลับไปยัง client
+   }
+
 });
 
 module.exports = router;

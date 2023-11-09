@@ -3,247 +3,247 @@
         "id": "100104",
         "latitude": "18.924875160076116",
         "longitude": "99.12266322806133",
-        "province":"ChiangMai",
-        "region":"North"
+        "province":"เชียงใหม่",
+        "region":"ภาคเหนือ"
     },
     {
         "id": "100105",
         "latitude": "18.52344284300219",
         "longitude": "99.62560355263315",
-        "province":"Lampang",
-        "region":"North"
+        "province":"ลำปาง",
+        "region":"ภาคเหนือ"
     },
     {
         "id": "100106",
         "latitude": "18.809254588395685",
         "longitude": "99.64294322934713",
-        "province":"Lampang",
-        "region":"North"
+        "province":"ลำปาง",
+        "region":"ภาคเหนือ"
     },
     {
         "id": "100107",
         "latitude": "17.189584177366743",
         "longitude": "100.42160001638017",
-        "province":"Phitsanulok",
-        "region":"North"
+        "province":"พิษณุโลก",
+        "region":"ภาคเหนือ"
     },
     {
         "id": "100108",
         "latitude": "17.324265983811234",
         "longitude": "99.41126708215302",
-        "province":"Lampang",
-        "region":"North"
+        "province":"ลำปาง",
+        "region":"ภาคเหนือ"
     },
     {
         "id": "200101",
         "latitude": "17.242694628017123",
         "longitude": "98.97268331056529",
-        "province":"Tak",
-        "region":"North"
+        "province":"ตาก",
+        "region":"ภาคเหนือ"
     },
     {
         "id": "200102",
         "latitude": "17.764062677298583",
         "longitude": "100.56359048755601",
-        "province":"Uttaradit",
-        "region":"North"
+        "province":"อุตรดิตถ์",
+        "region":"ภาคเหนือ"
     },
     {
         "id": "200103",
         "latitude": "19.175241730573095",
         "longitude": "99.03423685564",
-        "province":"ChiangMai",
-        "region":"North"
+        "province":"เชียงใหม่",
+        "region":"ภาคเหนือ"
     },
     {
         "id": "100301",
         "latitude": "14.866406314737441",
         "longitude": "101.05999133758326",
-        "province":"LopBuri",
-        "region":"Central"
+        "province":"ลพบุรี",
+        "region":"ภาคกลาง"
     },
     {
         "id": "100302",
         "latitude": "15.540691006494155",
         "longitude": "99.43310208139135",
-        "province":"UthaiThani",
-        "region":"Central"
+        "province":"อุทัยธานี",
+        "region":"ภาคกลาง"
     },
     {
         "id": "100303",
         "latitude": "14.840408139745358",
         "longitude": "99.67146616154585",
-        "province":"SuphanBuri",
-        "region":"Central"
+        "province":"สุพรรณบุรี",
+        "region":"ภาคกลาง"
     },
     {
         "id": "200401",
         "latitude": "14.410877917568946",
         "longitude": "99.1249846939014",
-        "province":"Kanchanaburi",
-        "region":"West"
+        "province":"กาญจนบุรี",
+        "region":"ภาคตะวันตก"
     },
     {
         "id": "200402",
         "latitude": "14.830886930090456",
         "longitude": "98.68765885442677",
-        "province":"Kanchanaburi",
-        "region":"West"
+        "province":"กาญจนบุรี",
+        "region":"ภาคตะวันตก"
 
     },
     {
         "id": "100501",
         "latitude": "14.314203092174996",
         "longitude": "101.32160605560233",
-        "province":"NakhonNayok",
-        "region":"East"
+        "province":"นครนายก",
+        "region":"ภาคตะวันออก"
     },
     {
         "id": "100502",
         "latitude": "13.433985308754838",
         "longitude": "101.65128060980906",
-        "province":"Chachoengsao",
-        "region":"East"
+        "province":"ฉะเชิงเทรา",
+        "region":"ภาคตะวันออก"
     },
     {
         "id": "100503",
         "latitude": "13.205243432600728",
         "longitude": "100.97726347863085",
-        "province":"ChonBuri",
-        "region":"East"
+        "province":"ชลบุรี",
+        "region":"ภาคตะวันออก"
     },
     {
         "id": "100504",
         "latitude": "12.946599904635278",
         "longitude": "101.26522390317758",
-        "province":"Rayong",
-        "region":"East"
+        "province":"ระยอง",
+        "region":"ภาคตะวันออก"
     },
     {
         "id": "100505",
         "latitude": "12.98542875727285",
         "longitude": "101.56235843828713",
-        "province":"Rayong",
-        "region":"East"
+        "province":"ระยอง",
+        "region":"ภาคตะวันออก"
     },
     {
         "id": "100514",
         "latitude": "14.075240787362631",
         "longitude": "102.03218429393267",
-        "province":"PrachinBuri",
-        "region":"East"
+        "province":"ปราจีนบุรี",
+        "region":"ภาคตะวันออก"
     },
     {
         "id": "100602",
         "latitude": "12.457276117910444",
         "longitude": "99.79422001453311",
-        "province":"PrachuapKhiriKhan",
-        "region":"South"
+        "province":"ประจวบคีรีขันธ์",
+        "region":"ภาคใต้"
     },
     {
         "id": "200601",
         "latitude": "12.914894575420938",
         "longitude": "99.62760708336137",
-        "province":"Phetchaburi",
-        "region":"South"
+        "province":"เพชรบุรี",
+        "region":"ภาคใต้"
     },
     {
         "id": "200603",
         "latitude": "8.972541376396636",
         "longitude": "98.8060051027748",
-        "province":"SuratThani",
-        "region":"South"
+        "province":"สุราษฎร์ธานี",
+        "region":"ภาคใต้"
     },
     {
         "id": "200604",
         "latitude": "6.157523473115944",
         "longitude": "101.27083039729656",
-        "province":"Yala",
-        "region":"South"
+        "province":"ยะลา",
+        "region":"ภาคใต้"
     },
     {
         "id": "100201",
         "latitude": "17.369525355890246",
         "longitude": "102.62022567641446",
-        "province":"UdonThani",
-        "region":"Northeast"
+        "province":"อุดรธานี",
+        "region":"ภาคตะวันออกเฉียงเหนือ"
     },
     {
         "id": "100202",
         "latitude": "17.309185336272172",
         "longitude": "103.7430287433701",
-        "province":"SakonNakhon",
-        "region":"Northeast"
+        "province":"สกลนคร",
+        "region":"ภาคตะวันออกเฉียงเหนือ"
     },
     {
         "id": "100206",
         "latitude": "16.60235987598631",
         "longitude": "103.44146131403791",
-        "province":"Kalasin",
-        "region":"Northeast"
+        "province":"กาฬสินธุ์",
+        "region":"ภาคตะวันออกเฉียงเหนือ"
         
     },
     {
         "id": "100207",
         "latitude": "14.865217750798084",
         "longitude": "101.56058913168101",
-        "province":"NakhonRatchasima",
-        "region":"Northeast"
+        "province":"นครราชสีมา",
+        "region":"ภาคตะวันออกเฉียงเหนือ"
     },
     {
         "id": "100208",
         "latitude": "14.505516883391001",
         "longitude": "101.78087786051069",
-        "province":"NakhonRatchasima",
-        "region":"Northeast"
+        "province":"นครราชสีมา",
+        "region":"ภาคตะวันออกเฉียงเหนือ"
     },
     {
         "id": "100209",
         "latitude": "14.483795743223821",
         "longitude": "102.14764393352284",
-        "province":"NakhonRatchasima",
-        "region":"Northeast"
+        "province":"นครราชสีมา",
+        "region":"ภาคตะวันออกเฉียงเหนือ"
     },
     {
         "id": "100210",
         "latitude": "14.402613895151704",
         "longitude": "102.24924087404906",
-        "province":"NakhonRatchasima",
-        "region":"Northeast"
+        "province":"นครราชสีมา",
+        "region":"ภาคตะวันออกเฉียงเหนือ"
     },
     {
         "id": "100211",
         "latitude": "14.300152011817762",
         "longitude": "102.760262627293",
-        "province":"Buriram",
-        "region":"Northeast"
+        "province":"บุรีรัมย์",
+        "region":"ภาคตะวันออกเฉียงเหนือ"
     },
     {
         "id": "200203",
         "latitude": "16.978103714309814",
         "longitude": "103.9731070183201",
-        "province":"SakonNakhon",
-        "region":"Northeast"
+        "province":"สกลนคร",
+        "region":"ภาคตะวันออกเฉียงเหนือ"
     },
     {
         "id": "200204",
         "latitude": "16.535659057019267",
         "longitude": "101.64974556054497",
-        "province":"Chaiyaphum",
-        "region":"Northeast"
+        "province":"ชัยภูมิ",
+        "region":"ภาคตะวันออกเฉียงเหนือ"
     },
     {
         "id": "200205",
         "latitude": "16.775605934195433",
         "longitude": "102.61898275731708",
-        "province":"KhonKaen",
-        "region":"Northeast"
+        "province":"ขอนแก่น",
+        "region":"ภาคตะวันออกเฉียงเหนือ"
     },
     {
         "id": "200212",
         "latitude": "15.205624224129815",
         "longitude": "105.43011042244777",
-        "province":"UbonRatchathani",
-        "region":"Northeast"
+        "province":"อุบลราชธานี",
+        "region":"ภาคตะวันออกเฉียงเหนือ"
     }
 ]
