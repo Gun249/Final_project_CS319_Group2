@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Axios -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js -->
-    <script src = "main.js"></script> <!-- เชื่อม js -->
+    <script src = "assets\js\main.js"></script> <!-- เชื่อม js -->
     <!-- แผนที่ -->
 
     <div class="container mt-5"> 
@@ -29,15 +29,14 @@
     </div> 
     <select id ="province">
         <option value="Default">ทุกจังหวัด</option>
-        <div class="north">
-            <option value="เชียงใหม่"class ="North">เชียงใหม่</option>
-            <option value="ตาก"class ="North">ตาก</option>
-            <option value="พิษณุโลก"class ="North">พิษณุโลก</option>
-            <option value="อุตรดิตถ์"class ="North">อุตรดิตถ์</option>
-            <option value="ลำปาง"class ="North" >ลำปาง</option>
-
-        </div>
-        <div class="northeast">
+        <optgroup label="ภาคเหนือ" id="ภาคเหนือ" class="province-group">
+            <option value="เชียงใหม่">เชียงใหม่</option>
+            <option value="ตาก">ตาก</option>
+            <option value="พิษณุโลก">พิษณุโลก</option>
+            <option value="อุตรดิตถ์">อุตรดิตถ์</option>
+            <option value="ลำปาง">ลำปาง</option>
+        </optgroup>
+        <optgroup label="ภาคตะวันออกเฉียงเหนือ" id="ภาคตะวันออกเฉียงเหนือ" class="province-group">
             <option value="อุดรธานี">อุดรธานี</option>
             <option value="สกลนคร">สกลนคร</option>
             <option value="กาฬสินธุ์">กาฬสินธุ์</option>
@@ -46,30 +45,30 @@
             <option value="ขอนแก่น">ขอนแก่น</option>
             <option value="อุบลราชธานี">อุบลราชธานี</option>
             <option value="ชัยภูมิ">ชัยภูมิ</option>
-
-        </div>
-        <div class="center">
+        </optgroup>
+        <optgroup label="ภาคกลาง" id="ภาคกลาง" class="province-group">
             <option value="ลพบุรี">ลพบุรี</option>
             <option value="อุทัยธานี">อุทัยธานี</option>
             <option value="สุพรรณบุรี">สุพรรณบุรี</option>
-        </div>
-        <div class="west">
+        </optgroup>
+        <optgroup label="ภาคตะวันตก" id="ภาคตะวันตก" class="province-group">
             <option value="กาญจนบุรี">กาญจนบุรี</option>
-        </div>
-        <div class="east">
+        </optgroup>
+        <optgroup label="ภาคตะวันออก" id="ภาคตะวันออก" class="province-group">
             <option value="ชลบุรี">ชลบุรี</option>
             <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
             <option value="นครนายก">นครนายก</option>
             <option value="ปราจีนบุรี">ปราจีนบุรี</option>
             <option value="ระยอง">ระยอง</option>
-        </div>
-        <div class="south">
+        </optgroup>
+        <optgroup label="ภาคใต้" id="ภาคใต้" class="province-group" >
             <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
             <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
             <option value="ยะลา">ยะลา</option>
             <option value="เพชรบุรี">เพชรบุรี</option>
+        </optgroup>
     </select>
-    <select id="region">
+    <select id="region" onchange="updateProvinces()">
         <option value="Default">ทุกภาค</option>
         <option value="ภาคเหนือ">ภาคเหนือ</option>
         <option value="ภาคตะวันออกเฉียงเหนือ">ภาคตะวันออกเฉียงเหนือ</option>

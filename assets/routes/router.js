@@ -41,7 +41,4 @@ router.get('/api',async (req, res) => {
     }
 });
 
-
-
-
 module.exports = router;
